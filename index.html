@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Devenir formateur en informatique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f0fbfd;--bg2:#ffffff;--tx:#072a33;--mut:#3f6b75;--red:#0e7490;--glow:rgba(14,116,144,.18);--bd:#b8e6ee;--hl:0 0 0 transparent;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#02090c;--bg2:#061317;--tx:#e6fbff;--mut:#8fc4cf;--red:#00e5ff;--glow:rgba(0,229,255,.5);--bd:#0f3f4a;--hl:0 0 12px #00e5ff,0 0 32px rgba(0,229,255,.6)}}
+:root[data-theme="dark"]{--bg:#02090c;--bg2:#061317;--tx:#e6fbff;--mut:#8fc4cf;--red:#00e5ff;--glow:rgba(0,229,255,.5);--bd:#0f3f4a;--hl:0 0 12px #00e5ff,0 0 32px rgba(0,229,255,.6)}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.65 "Space Grotesk",system-ui,sans-serif;transition:background .3s,color .3s}
+a{color:var(--red)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;gap:6px;align-items:center;padding:10px 16px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd);overflow-x:auto}
+nav a{white-space:nowrap;text-decoration:none;color:var(--mut);padding:6px 12px;border-radius:99px;font-size:14px;transition:.2s}
+nav a:hover{color:var(--red);box-shadow:inset 0 0 0 1px var(--red),var(--hl)}
+#theme{margin-left:auto;flex:none;cursor:pointer;border:1px solid var(--red);background:transparent;color:var(--red);border-radius:99px;padding:6px 14px;font:inherit;font-size:14px;transition:.2s}
+#theme:hover{background:var(--red);color:var(--bg);box-shadow:var(--hl)}
+header{max-width:900px;margin:0 auto;padding:72px 20px 40px}
+h1{font-size:clamp(38px,8vw,76px);line-height:1.02;margin:0 0 18px;letter-spacing:-.03em;color:var(--red);text-shadow:var(--hl)}
+header p{max-width:620px;color:var(--mut);font-size:19px;margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid var(--red);color:var(--red);border-radius:99px;padding:5px 14px;font-size:14px;transition:.2s;cursor:default}
+.chip:hover{background:var(--red);color:var(--bg);box-shadow:var(--hl);transform:translateY(-2px)}
+main{max-width:900px;margin:0 auto;padding:0 20px 80px}
+section{padding:44px 0 0}
+h2{font-size:clamp(26px,4.5vw,38px);margin:0 0 6px;letter-spacing:-.02em}
+h2::after{content:"";display:block;width:64px;height:3px;margin-top:10px;background:var(--red);box-shadow:var(--hl);border-radius:3px}
+.sub{color:var(--mut);margin:12px 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--bg2);border:1px solid var(--bd);border-radius:14px;padding:18px 20px;transition:.25s}
+.card:hover{border-color:var(--red);box-shadow:var(--hl),0 8px 30px var(--glow);transform:translateY(-4px)}
+.card h3{margin:0 0 6px;font-size:18px;color:var(--red)}
+.card p,.card ul{margin:0;color:var(--mut);font-size:15.5px}
+.card ul{padding-left:18px}
+.note{border:1px solid var(--red);background:var(--bg2);padding:16px 20px;border-radius:16px;color:var(--mut);margin:32px 0 24px;box-shadow:var(--hl)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{cursor:pointer;border:1px solid var(--bd);background:var(--bg2);color:var(--tx);border-radius:99px;padding:8px 18px;font:inherit;font-size:15px;transition:.2s}
+.tab:hover{border-color:var(--red);box-shadow:var(--hl)}
+.tab[aria-selected="true"]{background:var(--red);color:var(--bg);border-color:var(--red);box-shadow:var(--hl)}
+.panel{display:none}.panel.on{display:block}
+.wrap{overflow-x:auto;border:1px solid var(--bd);border-radius:14px;background:var(--bg2)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15.5px}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--bd)}
+th{color:var(--red)}
+tr:last-child td{border-bottom:0}
+tbody tr{transition:.2s}
+tbody tr:hover{background:var(--glow)}
+.bar{height:8px;border-radius:8px;background:var(--bd);overflow:hidden;margin:6px 0 18px}
+.bar i{display:block;height:100%;width:0;background:var(--red);box-shadow:var(--hl);transition:width .4s}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;margin-bottom:8px;border:1px solid var(--bd);border-radius:12px;background:var(--bg2);cursor:pointer;transition:.2s}
+.chk:hover{border-color:var(--red);box-shadow:var(--hl)}
+.chk input{accent-color:var(--red);width:20px;height:20px;margin-top:3px;flex:none}
+.chk b{color:var(--red)}
+.chk input:checked+span{opacity:.5;text-decoration:line-through}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.pc{grid-template-columns:1fr}header{padding-top:48px}}
+.pro h3{color:#2bd67b}.con h3{color:var(--red)}
+footer{text-align:center;color:var(--mut);font-size:14px;padding:30px 20px 50px;border-top:1px solid var(--bd)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav>
+<a href="#metier">Métier</a><a href="#parcours">Parcours</a><a href="#offres">Offres</a><a href="#competences">Compétences</a><a href="#salaires">Salaires</a><a href="#carriere">Carrière</a><a href="#proscons">Pour / contre</a><a href="#marche">Marché</a><a href="#statuts">Titulaire / contractuel</a><a href="#comparatif">Comparatif</a>
+<button id="theme" type="button" aria-label="Changer de thème">Mode clair</button>
+</nav>
+
+<header>
+<h1>Devenir formateur en informatique</h1>
+<p>SIO, cybersécurité, réseaux, cloud, développement, data et IA : le métier, le parcours, les salaires et la carrière, en un seul guide.</p>
+<div class="chips"><span class="chip">SISR</span><span class="chip">SLAM</span><span class="chip">Cybersécurité</span><span class="chip">Cloud / DevOps</span><span class="chip">Data / IA</span></div>
+</header>
+
+<main>
+<p class="note">Les chiffres sont des ordres de grandeur du marché français (2025-2026). Vérifiez les grilles et salaires actuels sur service-public.fr, France Travail ou l'APEC avant de décider.</p>
+
+<section id="metier">
+<h2>Le métier</h2>
+<p class="sub">Transmettre une expertise technique avec une vraie méthode pédagogique.</p>
+<div class="grid">
+<div class="card"><h3>Préparer</h3><p>Cours, TP, labs, évaluations. Comptez 1 à 3 h de préparation pour 1 h de face-à-face au début.</p></div>
+<div class="card"><h3>Animer</h3><p>Cours, TP, projets et accompagnement individuel, en présentiel ou à distance.</p></div>
+<div class="card"><h3>Évaluer</h3><p>Corrections, jurys, épreuves certifiantes (E4, E5, E6 en BTS SIO).</p></div>
+<div class="card"><h3>Suivre et veiller</h3><p>Relation avec alternants, tuteurs et entreprises, et mise à jour constante des contenus.</p></div>
+</div>
+<p class="sub">Les statuts :</p>
+<div class="grid">
+<div class="card"><h3>Enseignant</h3><p>Public, fonctionnaire ou contractuel, programmes nationaux.</p></div>
+<div class="card"><h3>Formateur salarié</h3><p>École privée, AFPA, GRETA, organisme de formation.</p></div>
+<div class="card"><h3>Vacataire</h3><p>Quelques heures payées à l'heure, en plus d'un emploi.</p></div>
+<div class="card"><h3>Indépendant</h3><p>Freelance ou micro-entreprise, facturation à la journée.</p></div>
+<div class="card"><h3>Resp. pédagogique</h3><p>Pilote une filière : programme, intervenants, qualité.</p></div>
+</div>
+</section>
+
+<section id="parcours">
+<h2>Parcours et prérequis</h2>
+<p class="sub">Visez 3 à 5 ans d'expérience terrain avant de former.</p>
+<div class="grid">
+<div class="card"><h3>Diplômes</h3><ul><li>Minimum réaliste : Bac+2/+3 avec expérience</li><li>Recommandé : Bac+3 à Bac+5</li><li>Concours public : Bac+5</li></ul></div>
+<div class="card"><h3>Certifs techniques</h3><ul><li>Réseaux : CCNA, CCNP</li><li>Systèmes / cloud : RHCSA, AZ-104, AWS, CKA</li><li>Cyber : Security+, CEH, CISSP, OSCP, ISO 27001</li><li>Gestion : ITIL 4, PMP</li></ul></div>
+<div class="card"><h3>Certifs pédagogiques</h3><ul><li>TFP Formateur professionnel d'adultes</li><li>CAPET, CAPLP, agrégation</li><li>Ingénierie pédagogique</li></ul></div>
+<div class="card"><h3>Voies d'accès</h3><ul><li>Public : concours ou contractuel</li><li>Privé : dossier + démo pédagogique</li><li>Freelance : organismes certifiés Qualiopi</li></ul></div>
+</div>
+</section>
+
+<section id="offres">
+<h2>Offres d'emploi</h2>
+<p class="sub">Où chercher et quoi demander.</p>
+<div class="grid">
+<div class="card"><h3>Où chercher</h3><p>France Travail, APEC, LinkedIn, Indeed, portails des académies, sites de AFPA, GRETA, Simplon, M2i, Orsys, Cegos, ESGI, Ynov, EPITA, OpenClassrooms.</p></div>
+<div class="card"><h3>Mots-clés</h3><p>Formateur réseaux et sécurité, enseignant BTS SIO, professeur contractuel informatique, formateur DevOps, ingénieur pédagogique, intervenant vacataire.</p></div>
+<div class="card"><h3>Ce que veulent les recruteurs</h3><p>Expérience terrain récente, sens de la vulgarisation, TP concrets, disponibilité, et souvent une démo de 20 à 30 minutes.</p></div>
+<div class="card"><h3>Contrats</h3><p>CDI, CDD, contractuel, vacations, freelance, portage salarial.</p></div>
+</div>
+</section>
+
+<section id="competences">
+<h2>Compétences attendues</h2>
+<p class="sub">Passez la souris sur chaque spécialité.</p>
+<div class="grid">
+<div class="card"><h3>SISR</h3><p>Windows Server, Active Directory, Linux, VLAN, VPN, virtualisation, supervision, GLPI.</p></div>
+<div class="card"><h3>SLAM</h3><p>PHP/Symfony, JavaScript, Java ou C#, SQL, API REST, Git, UML.</p></div>
+<div class="card"><h3>Cybersécurité</h3><p>SIEM, pentest, EBIOS RM, ISO 27001, réponse à incident, cryptographie, RGPD.</p></div>
+<div class="card"><h3>Cloud / DevOps</h3><p>Docker, Kubernetes, Terraform, Ansible, CI/CD, AWS, Azure.</p></div>
+<div class="card"><h3>Data / IA</h3><p>Python, SQL, statistiques, machine learning, BI, MLOps.</p></div>
+<div class="card"><h3>Pédagogie</h3><p>Objectifs, progression, TP, évaluation par compétences, gestion de groupe, patience et clarté.</p></div>
+</div>
+</section>
+
+<section id="salaires">
+<h2>Salaires en France</h2>
+<p class="sub">Choisissez un statut.</p>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" aria-selected="true" data-p="p1" type="button">Public</button>
+<button class="tab" role="tab" aria-selected="false" data-p="p2" type="button">Privé</button>
+<button class="tab" role="tab" aria-selected="false" data-p="p3" type="button">Freelance</button>
+</div>
+<div class="panel on" id="p1"><div class="wrap"><table>
+<thead><tr><th>Niveau</th><th>Net / mois</th><th>Brut / an</th></tr></thead>
+<tbody>
+<tr><td>Junior (0-2 ans)</td><td>1 800-2 200 €</td><td>26-32 k€</td></tr>
+<tr><td>Confirmé (3-5 ans)</td><td>2 100-2 600 €</td><td>30-38 k€</td></tr>
+<tr><td>Senior (5-10 ans+)</td><td>2 600-3 500 €</td><td>38-50 k€</td></tr>
+</tbody></table></div>
+<p class="sub">Grilles indiciaires, avancement par échelons, primes (ISOE, heures sup) en plus. Le contractuel négocie selon diplôme et expérience.</p></div>
+<div class="panel" id="p2"><div class="wrap"><table>
+<thead><tr><th>Niveau</th><th>Brut / an</th><th>Net / mois</th></tr></thead>
+<tbody>
+<tr><td>Junior (0-2 ans)</td><td>28-36 k€</td><td>1 900-2 400 €</td></tr>
+<tr><td>Confirmé (3-5 ans)</td><td>35-45 k€</td><td>2 300-3 000 €</td></tr>
+<tr><td>Senior (5-10 ans+)</td><td>45-60 k€ et plus</td><td>3 000 €+</td></tr>
+</tbody></table></div>
+<p class="sub">Fourchette large : les écoles réputées en Île-de-France et les postes de coordination paient mieux.</p></div>
+<div class="panel" id="p3"><div class="wrap"><table>
+<thead><tr><th>Profil</th><th>Tarif</th></tr></thead>
+<tbody>
+<tr><td>TJM généraliste (réseau, dev web)</td><td>350-600 €/jour</td></tr>
+<tr><td>TJM cloud, DevOps, data</td><td>600-900 €/jour</td></tr>
+<tr><td>TJM cyber / certifs reconnues</td><td>700-1 200 €/jour</td></tr>
+<tr><td>Vacation en école</td><td>35-80 €/h</td></tr>
+<tr><td>Remplissage réaliste</td><td>40-60 % (90-130 j/an)</td></tr>
+</tbody></table></div>
+<p class="sub">Exemple : 110 jours × 650 € ≈ 71 500 € de CA, soit environ 54 000 € après cotisations, sans congés payés ni chômage solide.</p></div>
+<p class="note">Cyber, cloud, DevOps et IA paient 10 à 25 % de plus que le généraliste. L'Île-de-France ajoute 10 à 15 % dans le privé.</p>
+</section>
+
+<section id="carriere">
+<h2>Projection de carrière</h2>
+<div class="grid">
+<div class="card"><h3>0 à 1 an</h3><p>Tester le métier : vacations, ateliers, tutorat. Préparer TFP FPA ou concours.</p></div>
+<div class="card"><h3>1 à 3 ans</h3><p>Poste de formateur, bibliothèque de TP, spécialisation et certifications avancées.</p></div>
+<div class="card"><h3>3 à 5 ans</h3><p>Référent de module, tuteur de projets, jurys, premiers pas en coordination ou freelance.</p></div>
+<div class="card"><h3>5 à 10 ans</h3><p>Responsable pédagogique, directeur de centre, ingénieur pédagogique, consultant, création d'organisme, retour en entreprise.</p></div>
+</div>
+</section>
+
+<section id="proscons">
+<h2>Avantages et inconvénients</h2>
+<p class="sub">Choisissez un statut.</p>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" aria-selected="true" data-p="c1" type="button">Public</button>
+<button class="tab" role="tab" aria-selected="false" data-p="c2" type="button">Privé</button>
+<button class="tab" role="tab" aria-selected="false" data-p="c3" type="button">Freelance</button>
+</div>
+<div class="panel on" id="c1"><div class="pc"><div class="card pro"><h3>Avantages</h3><ul><li>Stabilité si titulaire</li><li>Congés, retraite, droits sociaux</li><li>Programme cadré, sens du service public</li></ul></div><div class="card con"><h3>Inconvénients</h3><ul><li>Salaire plafonné</li><li>Bureaucratie, mobilité imposée</li><li>Public parfois démotivé</li></ul></div></div></div>
+<div class="panel" id="c2"><div class="pc"><div class="card pro"><h3>Avantages</h3><ul><li>Souplesse pédagogique</li><li>Salaires parfois meilleurs</li><li>Évolution rapide vers la coordination</li></ul></div><div class="card con"><h3>Inconvénients</h3><ul><li>Qualité variable selon l'organisme</li><li>Pression du taux de remplissage</li><li>Charge administrative (Qualiopi)</li></ul></div></div></div>
+<div class="panel" id="c3"><div class="pc"><div class="card pro"><h3>Avantages</h3><ul><li>Liberté et choix des missions</li><li>Revenus potentiellement élevés</li><li>Mix formation et conseil</li></ul></div><div class="card con"><h3>Inconvénients</h3><ul><li>Précarité et prospection permanente</li><li>Pas de congés payés</li><li>Dépendance à quelques clients</li></ul></div></div></div>
+<p class="note">Dans tous les cas : préparation invisible, risque d'obsolescence si vous arrêtez de pratiquer, public hétérogène.</p>
+</section>
+
+<section id="marche">
+<h2>Marché du travail</h2>
+<p class="sub">Tous formateurs confondus (enquête BMO 2026, France Travail). Pas de chiffre fiable propre à l'informatique.</p>
+<div class="grid">
+<div class="card"><h3>15 535</h3><p>recrutements de formateurs prévus en 2026, contre 17 436 en 2025.</p></div>
+<div class="card"><h3>59 %</h3><p>des projets jugés difficiles par les employeurs, contre 43 % tous métiers.</p></div>
+<div class="card"><h3>Île-de-France</h3><p>2 825 projets, devant Auvergne-Rhône-Alpes (2 066) et Pays de la Loire (1 403).</p></div>
+<div class="card"><h3>Cloud / DevOps</h3><p>Rôles sous forte tension depuis 2025 ; freelances tech en hausse d'environ 90 % en 5 ans.</p></div>
+</div>
+<p class="note">Marché correct mais pas explosif : meilleure demande en cyber, cloud et réseaux. Les temps partiels et vacations sont fréquents.</p>
+</section>
+
+<section id="statuts">
+<h2>Public : titulaire vs contractuel</h2>
+<p class="sub">Le rappel des limites du public. Survolez une ligne.</p>
+<div class="wrap"><table style="min-width:620px">
+<thead><tr><th>Critère</th><th>Titulaire</th><th>Contractuel</th></tr></thead>
+<tbody>
+<tr><td>Accès</td><td>Concours (Bac+5), long et sélectif</td><td>Plus facile, surtout en informatique</td></tr>
+<tr><td>Salaire net moyen</td><td>≈ 3 090 €/mois (2024, carrières longues incluses)</td><td>≈ 670 € de moins en moyenne (2 140 € contre 2 810 € en 2022)</td></tr>
+<tr><td>Évolution</td><td>Échelons, hors classe, agrégation</td><td>Revalorisation tous les 3 ans, pas toujours respectée</td></tr>
+<tr><td>Stabilité</td><td>Maximale</td><td>CDD puis CDI possible, règles variables selon l'académie</td></tr>
+<tr><td>Priorité sur le poste</td><td>Prioritaire : s'il postule ou est affecté, le poste lui revient</td><td>Le poste saute : contrat non renouvelé ou arrêté si un titulaire arrive</td></tr>
+<tr><td>Risque</td><td>Salaire plafonné, mobilité imposée</td><td>Moins de visibilité, temps partiels, écart de traitement</td></tr>
+</tbody></table></div>
+<p class="note"><b>À retenir :</b> un contractuel n'occupe un poste que faute de titulaire. Si un titulaire postule ou est affecté sur ce poste, le contractuel saute : en général son contrat n'est pas renouvelé ou prend fin. Un CDI protège un peu plus, mais ne garantit pas le poste précis. Vérifiez votre cas auprès de l'académie.</p>
+<p class="note">Les contractuels pèsent plus de 10 % des enseignants et leur part augmente. Écart de salaire : DEPP, repris par la CGT (source syndicale). Renseignez-vous auprès de votre académie.</p>
+</section>
+
+<section id="comparatif">
+<h2>Tableau comparatif</h2>
+<p class="sub">Public, privé et freelance côte à côte. Survolez une ligne.</p>
+<div class="wrap"><table style="min-width:680px">
+<thead><tr><th>Critère</th><th>Public</th><th>Privé (salarié)</th><th>Freelance</th></tr></thead>
+<tbody>
+<tr><td>Accès</td><td>Concours ou contractuel</td><td>Dossier + démo</td><td>Réseau d'organismes</td></tr>
+<tr><td>Diplôme visé</td><td>Bac+5 (concours)</td><td>Bac+3 à Bac+5</td><td>Expertise + certifs</td></tr>
+<tr><td>Stabilité</td><td>Très forte (titulaire)</td><td>Moyenne (CDI/CDD)</td><td>Faible</td></tr>
+<tr><td>Liberté pédagogique</td><td>Programme national</td><td>Souple</td><td>Totale</td></tr>
+<tr><td>Évolution</td><td>Échelons, agrégation</td><td>Coordination, direction</td><td>Consulting, organisme</td></tr>
+<tr><td>Congés</td><td>Longues vacances scolaires</td><td>Congés payés</td><td>Non payés</td></tr>
+<tr><td>Principal risque</td><td>Salaire plafonné</td><td>Qualité variable</td><td>Précarité</td></tr>
+</tbody></table></div>
+</section>
+
+</main>
+
+<footer>Guide formateur IT, chiffres indicatifs à vérifier avant décision.<br><span class="chip" style="display:inline-block;margin-top:14px">Fait par Hillel Kharbouch, Issam El Asseri &amp; Diego Da Silva</span></footer>
+
+<script>
+(function(){
+var root=document.documentElement,btn=document.getElementById('theme');
+function isDark(){var t=root.getAttribute('data-theme');return t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches}
+function label(){btn.textContent=isDark()?'Mode clair':'Mode sombre'}
+try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}
+label();
+btn.addEventListener('click',function(){var n=isDark()?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}label()});
+document.querySelectorAll('.tabs').forEach(function(g){
+ var tabs=g.querySelectorAll('.tab');
+ tabs.forEach(function(t){t.addEventListener('click',function(){
+  tabs.forEach(function(x){x.setAttribute('aria-selected','false');document.getElementById(x.dataset.p).classList.remove('on')});
+  t.setAttribute('aria-selected','true');document.getElementById(t.dataset.p).classList.add('on')})})});
+})();
+</script>
+</body>
+</html>
